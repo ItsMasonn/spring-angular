@@ -53,10 +53,19 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>install-npm</id>
+						<id>npm-install</id>
 						<goals>
-							<goal>install-node-and-npm</goal>
+							<goal>npm</goal>
 						</goals>
+					</execution>
+					<execution>
+						<id>npm-build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run-script build</arguments>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
