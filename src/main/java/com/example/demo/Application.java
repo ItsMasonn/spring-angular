@@ -5,11 +5,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
 import java.util.*;
 
 @SpringBootApplication
 @RestController
 public class Application {
+	@RequestMapping("/user")
+	public Principal user(Principal user) {
+		return user;
+	}
+
 	@RequestMapping("/resource")
 	public Map<String, Object> home() {
 		Map<String, Object> model = new HashMap<String, Object>();
